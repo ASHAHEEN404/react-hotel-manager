@@ -10,14 +10,44 @@ const StyledSidebar = styled.aside`
   grid-row: 1/-1;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 3.2rem;
+`;
+
+const StyledAnchor = styled.a`
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #6366f1;
+  justify-content: center;
+`;
+
+const StyledNav = styled.nav`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+`;
+
+const StyledSpan = styled.span`
+  font-size: 1.4rem;
+  color: var(--color-grey-500);
+  text-align: center;
 `;
 
 function SideBar() {
   return (
     <StyledSidebar>
-      <Logo />
-      <MainNav />
+      <StyledNav>
+        <Logo />
+        <MainNav />
+      </StyledNav>
+
+      <StyledSpan>
+        Developed by{" "}
+        <StyledAnchor href="https://www.linkedin.com/in/abdallahshaheen404/">
+          Abdallah Shaheen
+        </StyledAnchor>
+      </StyledSpan>
     </StyledSidebar>
   );
 }
